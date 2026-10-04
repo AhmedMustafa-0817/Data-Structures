@@ -3,6 +3,7 @@ using namespace std;
 
 class node
 {
+    public:
     int val;
     node *next;
 
@@ -17,9 +18,8 @@ class node
 class LinkedList
 {
 private:
-    node *head;
-    node *tail;
-
+    node *head; // front of queue pointer
+    node *tail; // rear pointer
     int NodeCount;
     int MaxNodes;
 
