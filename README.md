@@ -22,11 +22,11 @@
 
 | | Module | What's inside |
 |---|---|---|
-| 🔹 | [**Simple Sorting**] | Bubble · Selection · Insertion |
-| 🔸 | [**Advanced Sorting**] | Merge · Quick · Heap · Counting |
-| 🧩 | [**Recursion & Backtracking**] | Recursive patterns · N-Queens · Subsets · Maze solving |
+| 🔹 | [**Simple Sorting**] | Bubble · Selection · Insertion · Comb · Shell |
+| 🔸 | [**Advanced Sorting**] | Merge · Quick · Radix |
+| 🧩 | [**Recursion & Backtracking**] | Recursive patterns · N-Queens · Rat in a Maze |
 | 🌳 | [**Binary Search Tree**] | Insert · Delete · Search · Traversals |
-| 📚 | [**Stack · Queue · Linked List**] | Array & linked implementations |
+| 📚 | [**Stack · Queue · Linked List**] | Array & Linked List implementations |
 
 ---
 
@@ -41,8 +41,9 @@
 | Insertion | `O(n)` | `O(n²)` | `O(n²)` | `O(1)` | ✅ |
 | Merge | `O(n log n)` | `O(n log n)` | `O(n log n)` | `O(n)` | ✅ |
 | Quick | `O(n log n)` | `O(n log n)` | `O(n²)` | `O(log n)` | ❌ |
-| Heap | `O(n log n)` | `O(n log n)` | `O(n log n)` | `O(1)` | ❌ |
+| Radix | `O(nk)` | `O(nk)` | `O(nk)` | `O(n+k)` | ✅ |
 
+k = number of digits / length of key
 ### Core Operations
 
 | Structure | Access | Search | Insert | Delete |
