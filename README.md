@@ -22,9 +22,9 @@
 
 | | Module | What's inside |
 |---|---|---|
-| 🔹 | [**Simple Sorting**](./01-simple-sorting) | Bubble · Selection · Insertion |
-| 🔸 | [**Advanced Sorting**](./02-advanced-sorting) | Merge · Quick · Heap · Counting |
-| 🧩 | [**Recursion & Backtracking**](./03-recursion-backtracking) | Recursive patterns · N-Queens · Subsets · Maze solving |
+| 🔹 | [**Simple Sorting**](./imple-sorting) | Bubble · Selection · Insertion |
+| 🔸 | [**Advanced Sorting**](./advanced-sorting) | Merge · Quick · Heap · Counting |
+| 🧩 | [**Recursion & Backtracking**](./backtracking) | Recursive patterns · N-Queens · Subsets · Maze solving |
 | 🌳 | [**Binary Search Tree**](./04-binary-search-tree) | Insert · Delete · Search · Traversals |
 | 📚 | [**Stack · Queue · Linked List**](./05-linear-structures) | Array & linked implementations |
 
