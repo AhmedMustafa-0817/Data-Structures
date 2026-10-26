@@ -22,7 +22,7 @@
 
 | | Module | What's inside |
 |---|---|---|
-| 🔹 | [**Simple Sorting**](./imple-sorting) | Bubble · Selection · Insertion |
+| 🔹 | [**Simple Sorting**](./simplesorting) | Bubble · Selection · Insertion |
 | 🔸 | [**Advanced Sorting**](./advanced-sorting) | Merge · Quick · Heap · Counting |
 | 🧩 | [**Recursion & Backtracking**](./backtracking) | Recursive patterns · N-Queens · Subsets · Maze solving |
 | 🌳 | [**Binary Search Tree**](./04-binary-search-tree) | Insert · Delete · Search · Traversals |
