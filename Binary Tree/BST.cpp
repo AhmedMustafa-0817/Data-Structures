@@ -36,8 +36,8 @@ class BinarySearchTree
             {
                 current->left = InsertNewNode(current->left, pData);
             }
-            else
-            {	            			// Move to right subtree
+            else  // Move to right subtree
+            {	            			
                 current->right = InsertNewNode(current->right, pData);
             }
 
@@ -97,7 +97,9 @@ class BinarySearchTree
 						return temp;
 					}
 
-				// CASE 3: Node has two children
+				// CASE 3: Node has two children. 
+                // Here we're moving to the right subtree, and choosing the leftmost i.e. the smallest
+                // value from that subtree. Then we'll replace it with the value of the node to delete.
 				else
 					{
 						node *temp = MinValueNode(current->right);
@@ -179,19 +181,6 @@ class BinarySearchTree
             cout << endl<< "Value Not Found" << endl;
         }
 
-        void PrintTree()
-        {
-            cout << endl<< "Inorder Traversal: ";
-            if(root == NULL)
-            {
-                cout << "Tree is Empty";
-            }
-            else
-            {
-                Inorder(root);
-            }
-            cout << endl;
-        }
 
         void DeleteNode(int pData)
         {

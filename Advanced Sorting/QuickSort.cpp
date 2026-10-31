@@ -1,38 +1,37 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
-int partition(int *arr, int low, int high)
+int partition(int *arr, int start, int end)
 {
     // choose the pivot
-    int pivot = arr[high];
-    int i = low - 1;
+    int pivot = arr[end];
+    int i = start - 1;
       
-    for (int j = low; j <= high - 1; j++)     // Traverse arr[low..high] and move all smaller
-    {										  // elements on left side. Elements from low to
-        if (arr[j] < pivot)                   // elements on left side. Elements from low to
-        {									  // i are smaller after every iteration
+    for (int j = start; j <= end - 1; j++)    // Traverse arr[start...end] and move all elements 
+    {										  // smaller than the pivot on left side. 
+        if (arr[j] < pivot)                   
+        {									   
             i++;
             swap(arr[i], arr[j]);
         }
     }
 	
-    swap(arr[i + 1], arr[high]);             // move pivot after smaller elements
+    swap(arr[i + 1], arr[end]);             // move pivot after smaller elements
     return i + 1;
 }
 
 // the QuickSort function implementation
 
 
-void quickSort(int *arr, int low, int high)
+void quickSort(int *arr, int start, int end)
 {
-    if (low < high)
+    if (start < end)
     {
         // pi is the partition return index of pivot
-        int pi = partition(arr, low, high);
+        int pi = partition(arr, start, end);
 
-        quickSort(arr, low, pi - 1);   // recursion calls for smaller elements
-        quickSort(arr, pi + 1, high);  // and greater or equals elements
+        quickSort(arr, start, pi - 1);   // recursion calls for smaller elements
+        quickSort(arr, pi  + 1, end);  // and greater or equals elements
     }
 }
 

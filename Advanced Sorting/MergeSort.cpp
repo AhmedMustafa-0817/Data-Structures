@@ -2,20 +2,20 @@
 using namespace std;
 void merge(int *,int, int , int );
 
-void merge_sort(int *arr, int low, int high)
+void merge_sort(int *arr, int start, int end)
 {
     int mid;
-    if (low < high){
+    if (start < end){
         //divide the array at mid and sort independently using merge sort
-        mid=(low+high)/2;
-        merge_sort(arr,low,mid); // left
-        merge_sort(arr,mid+1,high); // right
+        mid=(start+end)/2;
+        merge_sort(arr,start,mid); // left
+        merge_sort(arr,mid+1,end); // right
         //merge or conquer sorted arrays
-        merge(arr,low,high,mid);
+        merge(arr,start,end,mid);
     }
 }
 // Merge sort 
-void merge(int *arr, int low, int high, int mid)
+void merge(int *arr, int start, int end, int mid)
 {
     int i, j, k, c[30];
 	
@@ -23,12 +23,12 @@ void merge(int *arr, int low, int high, int mid)
     //j → first element of right subarray
     //k → position in temporary array
 	
-    i = low;
-    k = low;
+    i = start;
+    k = start;
     j = mid + 1;
 
     // merge both sorted halves
-    while (i <= mid && j <= high) {
+    while (i <= mid && j <= end) {
         if (arr[i] < arr[j]) {
             c[k] = arr[i];
             k++;
@@ -49,13 +49,13 @@ void merge(int *arr, int low, int high, int mid)
     }
     
 //  The remaining elements of the right side of the array are now coping :		
-	while (j <= high) {
+	while (j <= end) {
         c[k] = arr[j];
         k++;
         j++;
     }
    
-   for (i = low; i < k; i++)  {
+   for (i = start; i < k; i++)  {
         arr[i] = c[i];
     }
 }
